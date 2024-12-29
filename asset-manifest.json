@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/saaranshgarg1.github.io/DigitsRecogn/static/css/main.b2cc34b5.css",
+    "main.js": "/saaranshgarg1.github.io/DigitsRecogn/static/js/main.9999d2f0.js",
+    "static/js/453.c16f0ec8.chunk.js": "/saaranshgarg1.github.io/DigitsRecogn/static/js/453.c16f0ec8.chunk.js",
+    "index.html": "/saaranshgarg1.github.io/DigitsRecogn/index.html",
+    "main.b2cc34b5.css.map": "/saaranshgarg1.github.io/DigitsRecogn/static/css/main.b2cc34b5.css.map",
+    "main.9999d2f0.js.map": "/saaranshgarg1.github.io/DigitsRecogn/static/js/main.9999d2f0.js.map",
+    "453.c16f0ec8.chunk.js.map": "/saaranshgarg1.github.io/DigitsRecogn/static/js/453.c16f0ec8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b2cc34b5.css",
+    "static/js/main.9999d2f0.js"
+  ]
+}
