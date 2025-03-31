@@ -1,0 +1,24 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(28, 15px);
+    grid-template-rows: repeat(28, 15px);
+    gap: 1px;
+    justify-content: center;
+    user-select: none; /* Prevent text selection while drawing */
+  }
+  
+  .cell {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 4px; /* Optional: border for each cell */
+    cursor: pointer; /* Optional: change cursor to pointer for interactivity */
+  }
+  
+  .cell.active {
+    background-color: #333; /* Dark color when "drawn" */
+  }
+
+  .cell.semi-active {
+    background-color: #666; /* Dark color when "drawn" */
+  }
+  

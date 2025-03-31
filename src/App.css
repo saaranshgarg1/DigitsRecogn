@@ -3,20 +3,185 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 95vh;
-
+  /* max-width: 1000px; */
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.container  * {
+.container * {
   margin: 10px 0;
-
 }
-.pixel{
-    background-color: #fff;
-    border: 1px solid #000;
-    border-radius: 4px;
+
+#draw {
+  margin: 0 0 !important;
+  border: 0px !important;
+}
+
+.app-header {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.drawing-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  
+}
+
+.canvas-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 0px 0px !important;
+}
+
+.prediction-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f7fa;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  min-width: 280px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0 30px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn-clear {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-clear:hover {
+  background-color: #c0392b;
+  transform: translateY(-2px);
+}
+
+.visualization-section {
+  width: 100%;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  canvas {
+    max-width: 100%;
+  }
+}
+
+.pixel {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 4px;
 }
 
 .pixel.active {
   background-color: #333; /* Dark color when "drawn" */
+}
+
+/* Neural Network Visualization Styles */
+.prediction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 950px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.prediction-result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.prediction-result h2 {
+  font-size: 24px;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.network-visualization-container {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.network-visualization-container h3 {
+  font-size: 18px;
+  color: #34495e;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.neural-network-canvas {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+}
+
+.network-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 100%;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.clear-button {
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.clear-button:hover {
+  background-color: #c0392b;
 }

@@ -9,7 +9,7 @@ const loadMnistData = async () => {
     const dataset = mnist.set(48000, 12000);
 
     const prepareData = (data) => {
-        const images = data.map(sample => sample.input.map(val => (val > 0.7) ? 1 : 0));
+        const images = data.map(sample => sample.input.map(val => val));
         const labels = data.map(sample => sample.output);
 
         const imagesTensor = tf.tensor2d(images, [images.length, 28 * 28]);
@@ -42,7 +42,8 @@ const createModel = () => {
 
     // Fully Connected Layers
     model.add(tf.layers.flatten());
-    model.add(tf.layers.dense({ units: 128, activation: 'relu' }));
+    model.add(tf.layers.dense({ units: 32, activation: 'relu' }));
+    model.add(tf.layers.dense({ units: 32, activation: 'relu' }));
     model.add(tf.layers.dense({ units: 10, activation: 'softmax' })); // Output layer
 
     model.compile({
